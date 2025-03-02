@@ -1,3 +1,5 @@
+// there's a lot of work to do here but I'm moving on for now
+
 function add(a, b) {
     return a + b;
 }
@@ -24,7 +26,10 @@ function operate(op, a, b) {
     if (op === '+') return add(a, b);
     else if (op === '-') return subtract(a, b);
     else if (op === '*') return multiply(a, b);
-    else if (op === '/') return divide(a, b);
+    else if (op === '/') {
+        if (b === 0) return "can you not";
+        return divide(a, b);
+    }
     else return "ERROR";
 }
 
